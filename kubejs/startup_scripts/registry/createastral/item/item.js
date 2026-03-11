@@ -131,6 +131,12 @@
     event.create("createastral:sturdy_leggings", "leggings").tier("sturdyarmor");
     event.create("createastral:sturdy_boots", "boots").tier("sturdyarmor");
     //Other Items//
+    event.create("createastral:beta_iron_weapon", "hoe").tier("beta_iron");
+    event.create("createastral:beta_diamond_weapon", "hoe").tier("beta_diamond");
+    event.create("createastral:beta_desh_weapon", "hoe").tier("beta_desh");
+    event.create("createastral:beta_ostrum_weapon", "hoe").tier("beta_ostrum");
+    event.create("createastral:beta_calorite_weapon", "hoe").tier("beta_calorite");
+    event.create("createastral:beta_ender_weapon", "hoe").tier("beta_ender");
     event.create("createastral:orcane").displayName("Information / General Progression").glow(true);
     event.create("createastral:astral_singularity").food((food) => {
       food

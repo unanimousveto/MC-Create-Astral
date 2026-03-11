@@ -320,6 +320,13 @@
   "item.createastral.sturdy_chestplate": "Sturdy Chestplate",
   "item.createastral.sturdy_leggings": "Sturdy Leggings",
   "item.createastral.sturdy_boots": "Sturdy Boots",
+  
+  "item.createastral.beta_iron_weapon": "Beta Iron Sword",
+  "item.createastral.beta_diamond_weapon": "Beta Diamond Sword",
+  "item.createastral.beta_desh_weapon": "Beta Desh Sword",
+  "item.createastral.beta_ostrum_weapon": "Beta Ostrum Sword",
+  "item.createastral.beta_calorite_weapon": "Beta Calorite Sword",
+  "item.createastral.beta_ender_weapon": "Beta Ender Sword",
 
   "item.createastral.orcane": "Information / General Progression",
   "item.createastral.astral_singularity": "Astral Singularity",

@@ -21,5 +21,49 @@
       tier.level = 4;
       tier.enchantmentValue = 99;
     });
+	
+	//Beta swords
+    event.add("beta_iron", (tier) => {
+      tier.uses = 250;
+      tier.speed = 40.0;
+      tier.attackDamageBonus = 2.0;
+      tier.level = 2;
+      tier.enchantmentValue = 14;
+    });
+    event.add("beta_diamond", (tier) => {
+      tier.uses = 1561;
+      tier.speed = 40.0;
+      tier.attackDamageBonus = 3.0;
+      tier.level = 2;
+      tier.enchantmentValue = 10;
+    });
+    event.add("beta_desh", (tier) => {
+      tier.uses = 1089;
+      tier.speed = 40.0;
+      tier.attackDamageBonus = 3.5;
+      tier.level = 2;
+      tier.enchantmentValue = 14;
+    });
+    event.add("beta_ostrum", (tier) => {
+      tier.uses = 1561;
+      tier.speed = 40.0;
+      tier.attackDamageBonus = 4;
+      tier.level = 2;
+      tier.enchantmentValue = 10;
+    });
+    event.add("beta_calorite", (tier) => {
+      tier.uses = 2048;
+      tier.speed = 40.0;
+      tier.attackDamageBonus = 5;
+      tier.level = 2;
+      tier.enchantmentValue = 14;
+    });
+    event.add("beta_ender", (tier) => {
+      tier.uses = 2560;
+      tier.speed = 40.0;
+      tier.attackDamageBonus = 6;
+      tier.level = 2;
+      tier.enchantmentValue = 14;
+    });
   });
 })();
