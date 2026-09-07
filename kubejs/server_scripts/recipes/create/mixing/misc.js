@@ -388,6 +388,346 @@
         time: 20,
         id: "astraladditions_fragile_item_2",
       },
+      {
+        output: [{ fluid: "astraladditions:sputum", amount: INGOT }],
+        input: ["astraladditions:ender_tip"],
+        heat: "superheated",
+        time: 20,
+        id: "astraladditions_sputum",
+      },
+      {
+        output: ["astraladditions:shimmer_heart"],
+        input: [
+          Item.of("createastral:shimmer_marimo", 2),
+          "minecraft:heart_of_the_sea",
+          { fluid: "xpcrystals:soul", amount: BUCKET },
+        ],
+        heat: "heated",
+        time: 180,
+        id: "shimmer_heart",
+      },
+      {
+        output: ["astraladditions:shimmer_blaze_rod"],
+        input: [
+          Item.of("createastral:shimmer_marimo", 2),
+          Item.of("minecraft:blaze_rod", 2),
+          "tconstruct:blazing_bone",
+        ],
+        heat: "heated",
+        time: 180,
+        id: "shimmer_blaze_rod",
+      },
+
+      // --- Astral Foods Mod ---
+      {
+        output: ["astralfoods:astral_sauce"],
+        input: ["createastral:astral_singularity"],
+        heat: "superheated",
+        time: 80,
+        id: "astralfoods:astral_sauce",
+      },
+      {
+        output: ["astralfoods:quantum_pasta"],
+        input: ["astralfoods:astral_sauce", Item.of("astralfoods:quantum_bites", 2), "farmersdelight:raw_pasta"],
+        heat: "heated",
+        time: 250,
+        id: "astralfoods_quantum_pasta",
+      },
+      {
+        output: ["astralfoods:bulbas_tea"],
+        input: [
+          "astraladditions:bulba_root",
+          { fluid: "minecraft:water", amount: BOTTLE },
+          { fluid: "milk:still_milk", amount: BOTTLE },
+        ],
+        heat: "heated",
+        time: 45,
+        id: "astralfoods_bulbas_tea",
+      },
+      {
+        output: [{ fluid: "astralfoods:cream", amount: BUCKET }],
+        input: [Item.of("minecraft:sugar", 3), { fluid: "milk:still_milk", amount: BUCKET }],
+        heat: "heated",
+        time: 100,
+        id: "astralfoods_cream",
+      },
+      {
+        output: ["astralfoods:chocolate_ice_cream"],
+        input: ["create:bar_of_chocolate", { fluid: "astralfoods:cream", amount: 250 * mB }],
+        heat: "heated",
+        time: 60,
+        id: "astralfoods_chocolate_ice_cream",
+      },
+
+      // --- Create Mod ---
+      {
+        output: ["create:tree_fertilizer"],
+        input: ["#minecraft:saplings", "#c:coral_fans", "minecraft:bone_meal"],
+        time: 180,
+        id: "create_tree_fertilizer",
+      },
+      {
+        output: Item.of("create:blaze_cake", 8),
+        input: ["yttr:delicace", { fluid: "kubejs:metabolic_broth", amount: 250 * mB }],
+        heat: "superheated",
+        time: 100,
+        id: "create_blaze_cake",
+      },
+      {
+        output: Item.of("create:chromatic_compound", 1).withNBT({}),
+        input: [Item.of("techreborn:uu_matter", 4), { fluid: "kubejs:shimmer", amount: BUCKET }],
+        heat: "superheated",
+        time: 2500,
+        id: "create_chromatic_compound",
+      },
+      {
+        output: Fluid.of("create:honey", 100 * mB),
+        input: ["techreborn:sap", "minecraft:sugar"],
+        time: 100,
+        id: "create_honey_from_sap",
+      },
+      {
+        output: { fluid: "create:honey", amount: 500 * mB },
+        input: [
+          { fluid: "minecraft:water", amount: 500 * mB },
+          { fluid: "kubejs:shimmer", amount: 500 * mB },
+        ],
+        time: 3000,
+        id: "create_honey_from_shimmer",
+      },
+      {
+        output: ["create:refined_radiance"],
+        input: ["create:chromatic_compound", { fluid: "kubejs:molten_radiance", amount: 100 * mB }],
+        heat: "superheated",
+        time: 1000,
+        id: "create_refined_radiance",
+      },
+      {
+        output: ["create:dough"],
+        input: ["create:wheat_flour", { fluid: "minecraft:water", amount: 500 * mB }],
+        time: 10,
+        id: "create_dough",
+      },
+
+      // --- Create Astral Mod ---
+      {
+        output: "createastral:laskinium",
+        input: [
+          {
+            item: "createastral:subatomic_ingot",
+            amount: 2,
+          },
+          {
+            item: "createastral:astral_singularity",
+            amount: 2,
+          },
+          { fluid: "kubejs:molten_calorite", amount: INGOT },
+        ],
+        heat: "superheated",
+        time: 1000,
+        id: "createastral_laskinium",
+      },
+      {
+        output: "createastral:ender_mush",
+        input: [Item.of("tconstruct:ender_slime_crystal", 2), { fluid: "astraladditions:sputum", amount: 500 * mB }],
+        heat: "superheated",
+        time: 1000,
+        id: "createastral_ender_mush",
+      },
+      {
+        output: "createastral:separation_agent",
+        input: [{ fluid: "yttr:void", amount: BUCKET }, "createastral:refining_agent"],
+        heat: "superheated",
+        time: 2000,
+        id: "createastral_separation_agent",
+      },
+      {
+        output: "createastral:astral_conduit",
+        input: [
+          { fluid: "kubejs:shimmer", amount: BUCKET },
+          "minecraft:diamond_block",
+          "phonos:redstone_chip",
+          "minecraft:flint_and_steel",
+        ],
+        time: 30,
+        id: "createastral_astral_conduit",
+      },
+      {
+        output: ["createastral:logo"],
+        input: ["compressor:octuple_compressed_cobblestone"],
+        heat: "superheated",
+        time: 20,
+        id: "createastral_logo",
+      },
+      {
+        output: ["createastral:subatomic_ingot"],
+        input: [
+          Item.of("create:shadow_steel", 4),
+          Item.of("create:refined_radiance", 4),
+          "techreborn:data_storage_chip",
+        ],
+        heat: "superheated",
+        time: 20,
+        id: "createastral_subatomic_ingot",
+      },
+      {
+        output: "createastral:seitan",
+        input: [Item.of("minecraft:brown_mushroom", 3), { fluid: "createaddition:seed_oil", amount: 100 * mB }],
+        id: "createastral_seitan",
+      },
+      // Marimos
+      {
+        output: [Item.of("createastral:marimo", 3), { fluid: "minecraft:water", amount: 500 * mB }],
+        input: ["createastral:marimo", { fluid: "minecraft:water", amount: 500 * mB }],
+        time: 60,
+        id: "createastral_marimo_duplication",
+      },
+      {
+        output: [Item.of("createastral:shimmer_marimo", 1)],
+        input: ["createastral:marimo", "ae2:fluix_crystal", { fluid: "kubejs:shimmer", amount: 500 * mB }],
+        time: 180,
+        id: "createastral_shimmer_marimo",
+      },
+      {
+        output: [Item.of("createastral:shimmer_marimo", 3)],
+        input: ["createastral:shimmer_marimo", "ae2:fluix_crystal_seed", { fluid: "kubejs:shimmer", amount: INGOT }],
+        time: 180,
+        id: "createastral_shimmer_marimo_duplication",
+      },
+      {
+        output: [Item.of("createastral:ender_marimo", 1)],
+        input: ["createastral:marimo", "tconstruct:ender_slime_crystal", { fluid: "kubejs:shimmer", amount: 500 * mB }],
+        time: 180,
+        id: "createastral_ender_marimo",
+      },
+      {
+        output: [Item.of("createastral:ender_marimo", 3)],
+        input: [
+          "createastral:ender_marimo",
+          "tconstruct:ender_slime_grass_seeds",
+          { fluid: "astraladditions:sputum", amount: INGOT },
+        ],
+        time: 180,
+        id: "createastral_ender_marimo_duplication",
+      },
+      {
+        output: [Item.of("createastral:snowy_marimo", 1)],
+        input: ["createastral:marimo", "createastral:prismatic_crystal", { fluid: "kubejs:shimmer", amount: 500 * mB }],
+        time: 180,
+        id: "createastral_snowy_marimo",
+      },
+      {
+        output: [Item.of("createastral:snowy_marimo", 3)],
+        input: ["createastral:snowy_marimo", "ad_astra:ice_shard", { fluid: "minecraft:water", amount: 500 * mB }],
+        time: 180,
+        id: "createastral_snowy_marimo_duplication",
+      },
+      {
+        output: [Item.of("createastral:moonset_marimo", 1)],
+        input: [
+          "createastral:marimo",
+          "astraladditions:moonset_crystal",
+          { fluid: "kubejs:shimmer", amount: 500 * mB },
+        ],
+        time: 180,
+        id: "createastral_moonset_marimo",
+      },
+      {
+        output: [
+          Item.of(Item.of("createastral:marimo", 2)).withChance(0.4),
+          Item.of(Item.of("createastral:moonset_marimo", 2)).withChance(0.6),
+          { fluid: "minecraft:water", amount: BUCKET },
+        ],
+        input: ["createastral:marimo", "createastral:moonset_marimo", { fluid: "minecraft:water", amount: BUCKET }],
+        time: 60,
+        id: "createastral_moonset_marimo_duplication",
+      },
+      // Synthetic Slime
+      {
+        output: Item.of("createastral:synthetic_slime", 3),
+        input: [Item.of("techreborn:sponge_piece", 2), { fluid: "tconstruct:blood", amount: SLIMEBALL * 2 }],
+        time: 50,
+        id: "createastral_synthetic_slime_from_blood",
+      },
+      {
+        output: Item.of("createastral:synthetic_slime", 3),
+        input: [Item.of("techreborn:sponge_piece", 2), { fluid: "tconstruct:earth_slime", amount: SLIMEBALL * 2 }],
+        time: 50,
+        id: "createastral_synthetic_slime_from_earth_slime",
+      },
+      {
+        output: Item.of("createastral:synthetic_slime", 3),
+        input: [Item.of("techreborn:sponge_piece", 2), { fluid: "tconstruct:sky_slime", amount: SLIMEBALL * 2 }],
+        time: 50,
+        id: "createastral_synthetic_slime_from_sky_slime",
+      },
+      {
+        output: Item.of("createastral:synthetic_slime", 3),
+        input: [Item.of("techreborn:sponge_piece", 2), { fluid: "tconstruct:ender_slime", amount: SLIMEBALL * 2 }],
+        time: 50,
+        id: "createastral_synthetic_slime_from_ender_slime",
+      },
+
+      // --- Doodads Mod ---
+      {
+        output: "doodads:portable_nether",
+        input: [{ fluid: "kubejs:shimmer", amount: BUCKET }, "minecraft:lodestone"],
+        heat: "heated",
+        time: 500,
+        id: "doodads_portable_nether",
+      },
+      {
+        output: Item.of("doodads:stone_brick_road", 2),
+        input: [{ fluid: "kubejs:shimmer", amount: 500 * mB }, Item.of("minecraft:stone_bricks", 2)],
+        time: 1000,
+        id: "doodads_stone_brick_road",
+      },
+      {
+        output: Item.of("doodads:brick_road", 2),
+        input: [{ fluid: "kubejs:shimmer", amount: 500 * mB }, Item.of("minecraft:bricks", 2)],
+        time: 1000,
+        id: "doodads_brick_road",
+      },
+      {
+        output: "doodads:asphalt",
+        input: [{ fluid: "kubejs:compound_mixture", amount: 3000 }, "#c:concrete_powder"],
+        time: 50,
+        id: "doodads:asphalt",
+      },
+
+      // --- Dustrial Decor Mod ---
+      {
+        output: Item.of("dustrial_decor:cast_iron_billet", 3),
+        input: ["minecraft:iron_ingot", Item.of("create:andesite_alloy", 2), "minecraft:coal"],
+        id: "dustrial_decor_cast_iron_billet",
+      },
+
+      // --- Estrogen Mod ---
+      {
+        output: [{ fluid: "estrogen:molten_amethyst", amount: INGOT / 2 }],
+        input: [{ fluid: "tconstruct:molten_amethyst", amount: 500 * mB }, "astraladditions:bulba_root"],
+        time: 105,
+        id: "estrogen_molten_amethyst",
+      },
+      {
+        output: [{ fluid: "estrogen:horse_urine", amount: 500 * mB }, "createastral:horse"],
+        input: ["createastral:horse"],
+        time: 60,
+        id: "estrogen_distressed_horse",
+      },
+      {
+        output: ["estrogen:crystal_estrogen_pill"],
+        input: ["estrogen:estrogen_pill", "tconstruct:ender_slime_crystal"],
+        heat: "superheated",
+        time: 20,
+        id: "estrogen_crystal_estrogen_pill",
+      },
+      {
+        output: "estrogen:balls",
+        input: "minecraft:slime_ball",
+        heat: "heated",
+        id: "estrogen_balls",
+      },
 
       // --- Tech Reborn Mod ---
       {
@@ -459,6 +799,18 @@
         input: [{ fluid: "techreborn:sulfur", amount: 500 * mB }, Item.of("techreborn:coal_dust", 3)],
         time: 300,
         id: "techreborn_oil",
+      },
+      {
+        output: [{ fluid: "techreborn:mercury", amount: mB * 500 }],
+        input: ["yttr:quicksilver"],
+        heat: "superheated",
+        time: 20,
+        id: "techreborn_mercury",
+      },
+      {
+        output: Item.of("techreborn:rubber", 8),
+        input: [Item.of("techreborn:sap", 3), Item.of("techreborn:sulfur_dust", 1)],
+        id: "techreborn_rubber",
       },
       // Plantballs
       {
@@ -562,317 +914,122 @@
         time: 20,
         id: "tconstruct_necrotic_bone",
       },
-
-      // --- Estrogen Mod ---
       {
-        output: [{ fluid: "estrogen:molten_amethyst", amount: INGOT / 2 }],
-        input: [{ fluid: "tconstruct:molten_amethyst", amount: 500 * mB }, "astraladditions:bulba_root"],
-        time: 105,
-        id: "estrogen_molten_amethyst",
+        output: { fluid: "tconstruct:liquid_soul", amount: 250 * mB },
+        input: ["xpcrystals:soul_compound", { fluid: "minecraft:water", amount: 125 * mB }],
+        heat: "heated",
+        time: 25,
+        id: "tconstruct_liquid_soul",
       },
       {
-        output: [{ fluid: "estrogen:horse_urine", amount: 500 * mB }, "createastral:horse"],
-        input: ["createastral:horse"],
-        time: 60,
-        id: "estrogen_distressed_horse",
-      },
-      {
-        output: ["estrogen:crystal_estrogen_pill"],
-        input: ["estrogen:estrogen_pill", "tconstruct:ender_slime_crystal"],
-        heat: "superheated",
-        time: 20,
-        id: "estrogen_crystal_estrogen_pill",
-      },
-
-      // --- Create Mod ---
-      {
-        output: ["create:tree_fertilizer"],
-        input: ["#minecraft:saplings", "#c:coral_fans", "minecraft:bone_meal"],
-        time: 180,
-        id: "create_tree_fertilizer",
-      },
-      {
-        output: Item.of("create:blaze_cake", 8),
-        input: ["yttr:delicace", { fluid: "kubejs:metabolic_broth", amount: 250 * mB }],
-        heat: "superheated",
-        time: 100,
-        id: "create_blaze_cake",
-      },
-      {
-        output: Item.of("create:chromatic_compound", 1).withNBT({}),
-        input: [Item.of("techreborn:uu_matter", 4), { fluid: "kubejs:shimmer", amount: BUCKET }],
-        heat: "superheated",
-        time: 2500,
-        id: "create_chromatic_compound",
-      },
-      {
-        output: Fluid.of("create:honey", 100 * mB),
-        input: ["techreborn:sap", "minecraft:sugar"],
-        time: 100,
-        id: "create_honey_from_sap",
-      },
-      {
-        output: { fluid: "create:honey", amount: 500 * mB },
-        input: [
-          { fluid: "minecraft:water", amount: 500 * mB },
-          { fluid: "kubejs:shimmer", amount: 500 * mB },
-        ],
-        time: 3000,
-        id: "create_honey_from_shimmer",
-      },
-      {
-        output: ["create:refined_radiance"],
-        input: ["create:chromatic_compound", { fluid: "kubejs:molten_radiance", amount: 100 * mB }],
-        heat: "superheated",
-        time: 1000,
-        id: "create_refined_radiance",
-      },
-
-      // --- Create Astral Mod ---
-      {
-        output: "createastral:laskinium",
-        input: [
-          {
-            item: "createastral:subatomic_ingot",
-            amount: 2,
-          },
-          {
-            item: "createastral:astral_singularity",
-            amount: 2,
-          },
-          { fluid: "kubejs:molten_calorite", amount: INGOT },
-        ],
-        heat: "superheated",
-        time: 1000,
-        id: "createastral_laskinium",
-      },
-      {
-        output: "createastral:ender_mush",
-        input: [Item.of("tconstruct:ender_slime_crystal", 2), { fluid: "astraladditions:sputum", amount: 500 * mB }],
-        heat: "superheated",
-        time: 1000,
-        id: "createastral_ender_mush",
-      },
-      {
-        output: "createastral:separation_agent",
-        input: [{ fluid: "yttr:void", amount: BUCKET }, "createastral:refining_agent"],
-        heat: "superheated",
-        time: 2000,
-        id: "createastral_separation_agent",
-      },
-      {
-        output: "createastral:astral_conduit",
-        input: [
-          { fluid: "kubejs:shimmer", amount: BUCKET },
-          "minecraft:diamond_block",
-          "phonos:redstone_chip",
-          "minecraft:flint_and_steel",
-        ],
+        output: { fluid: "tconstruct:liquid_soul", amount: 250 * mB },
+        input: ["xpcrystals:soul_compound"],
+        heat: "heated",
         time: 30,
-        id: "createastral_astral_conduit",
+        id: "tconstruct_liquid_soul_heated",
       },
       {
-        output: ["createastral:logo"],
-        input: ["compressor:octuple_compressed_cobblestone"],
+        output: ["tconstruct:ender_slime_sling"],
+        input: ["tconstruct:ichor_slime_sling", "yttr:delicace", { fluid: "kubejs:metabolic_broth", amount: 500 * mB }],
         heat: "superheated",
         time: 20,
-        id: "createastral_logo",
+        id: "tconstruct_ender_slime_sling",
+      },
+      // VEGAN BLOOD
+      {
+        output: { fluid: "tconstruct:blood", amount: BUCKET },
+        input: [
+          Item.of("minecraft:beetroot", 2),
+          { fluid: "kubejs:tomato_sauce_fluid", amount: 900 * mB },
+          { fluid: "kubejs:shimmer", amount: 100 * mB },
+        ],
+        heat: "heated",
+        id: "tconstruct_blood",
       },
       {
-        output: ["createastral:subatomic_ingot"],
+        output: { fluid: "tconstruct:blazing_blood", amount: BUCKET },
+        input: ["minecraft:blaze_powder", { fluid: "tconstruct:blood", amount: BUCKET }],
+        heat: "superheated",
+        id: "tconstruct_blazing_blood",
+      },
+
+      // --- Yttr Mod ---
+      {
+        output: "yttr:yttrium_ingot",
         input: [
-          Item.of("create:shadow_steel", 4),
-          Item.of("create:refined_radiance", 4),
-          "techreborn:data_storage_chip",
+          { fluid: "kubejs:molten_desh", amount: INGOT * 4 },
+          { fluid: "kubejs:molten_yttrium", amount: INGOT },
         ],
         heat: "superheated",
+        time: 1000,
+      },
+      {
+        output: "yttr:yttrium_ingot",
+        input: [
+          { fluid: "kubejs:molten_ostrum", amount: INGOT * 2 },
+          { fluid: "kubejs:molten_yttrium", amount: INGOT },
+        ],
+        heat: "superheated",
+        time: 1000,
+      },
+      {
+        output: "yttr:yttrium_ingot",
+        input: [
+          { fluid: "kubejs:molten_calorite", amount: INGOT },
+          { fluid: "kubejs:molten_yttrium", amount: INGOT },
+        ],
+        heat: "superheated",
+        time: 1000,
+      },
+      {
+        output: "yttr:yttrium_ingot",
+        input: [Item.of("ad_astra:desh_ingot", 4), { fluid: "kubejs:molten_yttrium", amount: INGOT }],
+        heat: "superheated",
+        time: 1000,
+      },
+      {
+        output: "yttr:yttrium_ingot",
+        input: [Item.of("ad_astra:ostrum_ingot", 2), { fluid: "kubejs:molten_yttrium", amount: INGOT }],
+        heat: "superheated",
+        time: 1000,
+      },
+      {
+        output: "yttr:yttrium_ingot",
+        input: ["ad_astra:calorite_ingot", { fluid: "kubejs:molten_yttrium", amount: INGOT }],
+        heat: "superheated",
+        time: 1000,
+      },
+      {
+        output: "yttr:ruined_cobblestone",
+        input: ["minecraft:cobblestone", "yttr:rubble", { fluid: "tconstruct:magma", amount: 250 * mB }],
+        heat: "superheated",
+        time: 200,
+        id: "yttr_ruined_cobblestone",
+      },
+      {
+        output: "yttr:wasteland_stone",
+        input: ["minecraft:stone", "yttr:rubble", "yttr:rubble"],
+        time: 200,
+        id: "yttr_wasteland_stone",
+      },
+      {
+        output: "yttr:wasteland_dirt",
+        input: ["minecraft:sand", "yttr:rubble", "yttr:rubble"],
+        time: 200,
+        id: "yttr_wasteland_dirt",
+      },
+      {
+        output: "yttr:wasteland_log",
+        input: ["minecraft:oak_log", "yttr:rubble", "yttr:rubble"],
+        time: 200,
+        id: "yttr_wasteland_log",
+      },
+      {
+        output: ["yttr:promethium_speck"],
+        input: ["tconstruct:ender_slime_crystal", Item.of("yttr:rubble", 4)],
+        heat: "superheated",
         time: 20,
-        id: "createastral_subatomic_ingot",
-      },
-      // Synthetic Slime
-      {
-        output: Item.of("createastral:synthetic_slime", 3),
-        input: [Item.of("techreborn:sponge_piece", 2), { fluid: "tconstruct:blood", amount: SLIMEBALL * 2 }],
-        time: 50,
-        id: "createastral_synthetic_slime_from_blood",
-      },
-      {
-        output: Item.of("createastral:synthetic_slime", 3),
-        input: [Item.of("techreborn:sponge_piece", 2), { fluid: "tconstruct:earth_slime", amount: SLIMEBALL * 2 }],
-        time: 50,
-        id: "createastral_synthetic_slime_from_earth_slime",
-      },
-      {
-        output: Item.of("createastral:synthetic_slime", 3),
-        input: [Item.of("techreborn:sponge_piece", 2), { fluid: "tconstruct:sky_slime", amount: SLIMEBALL * 2 }],
-        time: 50,
-        id: "createastral_synthetic_slime_from_sky_slime",
-      },
-      {
-        output: Item.of("createastral:synthetic_slime", 3),
-        input: [Item.of("techreborn:sponge_piece", 2), { fluid: "tconstruct:ender_slime", amount: SLIMEBALL * 2 }],
-        time: 50,
-        id: "createastral_synthetic_slime_from_ender_slime",
-      },
-
-      // --- Doodads Mod ---
-      {
-        output: "doodads:portable_nether",
-        input: [{ fluid: "kubejs:shimmer", amount: BUCKET }, "minecraft:lodestone"],
-        heat: "heated",
-        time: 500,
-        id: "doodads_portable_nether",
-      },
-      {
-        output: Item.of("doodads:stone_brick_road", 2),
-        input: [{ fluid: "kubejs:shimmer", amount: 500 * mB }, Item.of("minecraft:stone_bricks", 2)],
-        time: 1000,
-        id: "doodads_stone_brick_road",
-      },
-      {
-        output: Item.of("doodads:brick_road", 2),
-        input: [{ fluid: "kubejs:shimmer", amount: 500 * mB }, Item.of("minecraft:bricks", 2)],
-        time: 1000,
-        id: "doodads_brick_road",
-      },
-      {
-        output: "doodads:asphalt",
-        input: [{ fluid: "kubejs:compound_mixture", amount: 3000 }, "#c:concrete_powder"],
-        time: 50,
-        id: "doodads:asphalt",
-      },
-
-      // --- Dustrial Decor Mod ---
-      {
-        output: Item.of("dustrial_decor:cast_iron_billet", 3),
-        input: ["minecraft:iron_ingot", Item.of("create:andesite_alloy", 2), "minecraft:coal"],
-        id: "dustrial_decor_cast_iron_billet",
-      },
-
-      // --- Shimmer ---
-      {
-        output: [{ fluid: "kubejs:shimmer", amount: BUCKET / 9 }],
-        input: ["ae2:fluix_crystal", "minecraft:glowstone_dust", "tconstruct:amethyst_bronze_nugget"],
-        heat: "heated",
-        time: 180,
-        id: "kubejs_shimmer_from_fluix_crystal",
-      },
-      {
-        output: [{ fluid: "kubejs:shimmer", amount: BUCKET }],
-        input: [Item.of("createastral:shimmer_marimo", 4), "naturalist:glow_goop", "astraladditions:lune_shroom"],
-        heat: "heated",
-        time: 180,
-        id: "kubejs_shimmer_from_shimmer_marimo",
-      },
-      {
-        output: { fluid: "kubejs:shimmer", amount: 250 * mB },
-        input: [Item.of("minecraft:amethyst_shard", 5), Item.of("minecraft:glow_ink_sac", 2)],
-        id: "kubejs_shimmer_from_amethyst_shard",
-      },
-      {
-        output: { fluid: "kubejs:shimmer", amount: 500 * mB },
-        input: [Item.of("techreborn:amethyst_dust", 5), Item.of("minecraft:glow_ink_sac", 2)],
-        heat: "heated",
-        id: "kubejs_shimmer_from_amethyst_dust",
-      },
-      {
-        output: { fluid: "kubejs:shimmer", amount: 1000 * mB },
-        input: [
-          Item.of("techreborn:amethyst_dust", 2),
-          Item.of("minecraft:glow_ink_sac", 1),
-          "astraladditions:lune_shroom",
-        ],
-        id: "kubejs_shimmer_from_lune_shroom",
-      },
-      {
-        output: ["astraladditions:shimmer_heart"],
-        input: [
-          Item.of("createastral:shimmer_marimo", 2),
-          "minecraft:heart_of_the_sea",
-          { fluid: "xpcrystals:soul", amount: BUCKET },
-        ],
-        heat: "heated",
-        time: 180,
-        id: "shimmer_heart",
-      },
-      {
-        output: ["astraladditions:shimmer_blaze_rod"],
-        input: [
-          Item.of("createastral:shimmer_marimo", 2),
-          Item.of("minecraft:blaze_rod", 2),
-          "tconstruct:blazing_bone",
-        ],
-        heat: "heated",
-        time: 180,
-        id: "shimmer_blaze_rod",
-      },
-
-      // --- Marimos ---
-      {
-        output: [Item.of("createastral:marimo", 3), { fluid: "minecraft:water", amount: 500 * mB }],
-        input: ["createastral:marimo", { fluid: "minecraft:water", amount: 500 * mB }],
-        time: 60,
-        id: "createastral_marimo_duplication",
-      },
-      {
-        output: [Item.of("createastral:shimmer_marimo", 1)],
-        input: ["createastral:marimo", "ae2:fluix_crystal", { fluid: "kubejs:shimmer", amount: 500 * mB }],
-        time: 180,
-        id: "createastral_shimmer_marimo",
-      },
-      {
-        output: [Item.of("createastral:shimmer_marimo", 3)],
-        input: ["createastral:shimmer_marimo", "ae2:fluix_crystal_seed", { fluid: "kubejs:shimmer", amount: INGOT }],
-        time: 180,
-        id: "createastral_shimmer_marimo_duplication",
-      },
-      {
-        output: [Item.of("createastral:ender_marimo", 1)],
-        input: ["createastral:marimo", "tconstruct:ender_slime_crystal", { fluid: "kubejs:shimmer", amount: 500 * mB }],
-        time: 180,
-        id: "createastral_ender_marimo",
-      },
-      {
-        output: [Item.of("createastral:ender_marimo", 3)],
-        input: [
-          "createastral:ender_marimo",
-          "tconstruct:ender_slime_grass_seeds",
-          { fluid: "astraladditions:sputum", amount: INGOT },
-        ],
-        time: 180,
-        id: "createastral_ender_marimo_duplication",
-      },
-      {
-        output: [Item.of("createastral:snowy_marimo", 1)],
-        input: ["createastral:marimo", "createastral:prismatic_crystal", { fluid: "kubejs:shimmer", amount: 500 * mB }],
-        time: 180,
-        id: "createastral_snowy_marimo",
-      },
-      {
-        output: [Item.of("createastral:snowy_marimo", 3)],
-        input: ["createastral:snowy_marimo", "ad_astra:ice_shard", { fluid: "minecraft:water", amount: 500 * mB }],
-        time: 180,
-        id: "createastral_snowy_marimo_duplication",
-      },
-      {
-        output: [Item.of("createastral:moonset_marimo", 1)],
-        input: [
-          "createastral:marimo",
-          "astraladditions:moonset_crystal",
-          { fluid: "kubejs:shimmer", amount: 500 * mB },
-        ],
-        time: 180,
-        id: "createastral_moonset_marimo",
-      },
-      {
-        output: [
-          Item.of(Item.of("createastral:marimo", 2)).withChance(0.4),
-          Item.of(Item.of("createastral:moonset_marimo", 2)).withChance(0.6),
-          { fluid: "minecraft:water", amount: BUCKET },
-        ],
-        input: ["createastral:marimo", "createastral:moonset_marimo", { fluid: "minecraft:water", amount: BUCKET }],
-        time: 60,
-        id: "createastral_moonset_marimo_duplication",
+        id: "yttr_promethium_speck",
       },
 
       // --- Truly Miscellaneous Recipes ---
@@ -932,90 +1089,6 @@
         id: "blahaj_gray_shark",
       },
       {
-        output: "yttr:yttrium_ingot",
-        input: [
-          { fluid: "kubejs:molten_desh", amount: INGOT * 4 },
-          { fluid: "kubejs:molten_yttrium", amount: INGOT },
-        ],
-        heat: "superheated",
-        time: 1000,
-      },
-      {
-        output: "yttr:yttrium_ingot",
-        input: [
-          { fluid: "kubejs:molten_ostrum", amount: INGOT * 2 },
-          { fluid: "kubejs:molten_yttrium", amount: INGOT },
-        ],
-        heat: "superheated",
-        time: 1000,
-      },
-      {
-        output: "yttr:yttrium_ingot",
-        input: [
-          { fluid: "kubejs:molten_calorite", amount: INGOT },
-          { fluid: "kubejs:molten_yttrium", amount: INGOT },
-        ],
-        heat: "superheated",
-        time: 1000,
-      },
-      {
-        output: "yttr:yttrium_ingot",
-        input: [Item.of("ad_astra:desh_ingot", 4), { fluid: "kubejs:molten_yttrium", amount: INGOT }],
-        heat: "superheated",
-        time: 1000,
-      },
-      {
-        output: "yttr:yttrium_ingot",
-        input: [Item.of("ad_astra:ostrum_ingot", 2), { fluid: "kubejs:molten_yttrium", amount: INGOT }],
-        heat: "superheated",
-        time: 1000,
-      },
-      {
-        output: "yttr:yttrium_ingot",
-        input: ["ad_astra:calorite_ingot", { fluid: "kubejs:molten_yttrium", amount: INGOT }],
-        heat: "superheated",
-        time: 1000,
-      },
-      {
-        output: ["astralfoods:astral_sauce"],
-        input: ["createastral:astral_singularity"],
-        heat: "superheated",
-        time: 80,
-        id: "astralfoods:astral_sauce",
-      },
-      {
-        output: ["astralfoods:quantum_pasta"],
-        input: ["astralfoods:astral_sauce", Item.of("astralfoods:quantum_bites", 2), "farmersdelight:raw_pasta"],
-        heat: "heated",
-        time: 250,
-        id: "astralfoods_quantum_pasta",
-      },
-      {
-        output: "yttr:ruined_cobblestone",
-        input: ["minecraft:cobblestone", "yttr:rubble", { fluid: "tconstruct:magma", amount: 250 * mB }],
-        heat: "superheated",
-        time: 200,
-        id: "yttr_ruined_cobblestone",
-      },
-      {
-        output: "yttr:wasteland_stone",
-        input: ["minecraft:stone", "yttr:rubble", "yttr:rubble"],
-        time: 200,
-        id: "yttr_wasteland_stone",
-      },
-      {
-        output: "yttr:wasteland_dirt",
-        input: ["minecraft:sand", "yttr:rubble", "yttr:rubble"],
-        time: 200,
-        id: "yttr_wasteland_dirt",
-      },
-      {
-        output: "yttr:wasteland_log",
-        input: ["minecraft:oak_log", "yttr:rubble", "yttr:rubble"],
-        time: 200,
-        id: "yttr_wasteland_log",
-      },
-      {
         output: [{ fluid: "ad_astra:cryo_fuel", amount: BUCKET }],
         input: [
           { fluid: "techreborn:nitrogen", amount: BUCKET },
@@ -1025,76 +1098,60 @@
         id: "ad_astra_cryo_fuel",
       },
       {
-        output: ["astralfoods:bulbas_tea"],
-        input: [
-          "astraladditions:bulba_root",
-          { fluid: "minecraft:water", amount: BOTTLE },
-          { fluid: "milk:still_milk", amount: BOTTLE },
-        ],
-        heat: "heated",
-        time: 45,
-        id: "astralfoods_bulbas_tea",
-      },
-      {
-        output: ["yttr:promethium_speck"],
-        input: ["tconstruct:ender_slime_crystal", Item.of("yttr:rubble", 4)],
-        heat: "superheated",
-        time: 20,
-        id: "yttr_promethium_speck",
-      },
-      {
-        output: ["tconstruct:ender_slime_sling"],
-        input: ["tconstruct:ichor_slime_sling", "yttr:delicace", { fluid: "kubejs:metabolic_broth", amount: 500 * mB }],
-        heat: "superheated",
-        time: 20,
-        id: "tconstruct_ender_slime_sling",
-      },
-      {
-        output: [{ fluid: "astraladditions:sputum", amount: INGOT }],
-        input: ["astraladditions:ender_tip"],
-        heat: "superheated",
-        time: 20,
-        id: "astraladditions_sputum",
-      },
-      {
-        output: [{ fluid: "techreborn:mercury", amount: mB * 500 }],
-        input: ["yttr:quicksilver"],
-        heat: "superheated",
-        time: 20,
-        id: "techreborn_mercury",
-      },
-      {
-        output: { fluid: "tconstruct:blood", amount: BUCKET },
-        input: [
-          Item.of("minecraft:beetroot", 2),
-          { fluid: "kubejs:tomato_sauce_fluid", amount: 900 * mB },
-          { fluid: "kubejs:shimmer", amount: 100 * mB },
-        ],
-        heat: "heated",
-        //Vegan BLOOD
-        id: "tconstruct_blood",
-      },
-      {
-        output: "createastral:seitan",
-        input: [Item.of("minecraft:brown_mushroom", 3), { fluid: "createaddition:seed_oil", amount: 100 * mB }],
-        id: "createastral_seitan",
-      },
-      {
-        output: { fluid: "tconstruct:blazing_blood", amount: BUCKET },
-        input: ["minecraft:blaze_powder", { fluid: "tconstruct:blood", amount: BUCKET }],
-        heat: "superheated",
-        //Vegan BLOOD
-        id: "tconstruct_blazing_blood",
-      },
-      {
-        output: Item.of("techreborn:rubber", 8),
-        input: [Item.of("techreborn:sap", 3), Item.of("techreborn:sulfur_dust", 1)],
-        id: "techreborn_rubber",
-      },
-      {
         output: { fluid: "kubejs:red_paste", amount: 300 * mB },
         input: [Item.of("minecraft:sweet_berries", 7), { fluid: "minecraft:water", amount: 500 * mB }], // red dye for crimsite premoon
         id: "kubejs_red_paste",
+      },
+      {
+        output: { fluid: "xpcrystals:soul", amount: 250 * mB },
+        input: { fluid: "tconstruct:liquid_soul", amount: 250 * mB },
+        time: 25,
+        id: "xpcrystals_soul",
+      },
+      {
+        output: { fluid: "createaddition:bioethanol", amount: BUCKET },
+        input: ["minecraft:sugar", "create:cinder_flour", Item.of("createaddition:biomass", 2)],
+        id: "createaddition_bioethanol",
+      },
+      {
+        output: ["farmersdelight:pie_crust"],
+        input: [{ fluid: "milk:still_milk", amount: 250 * mB }, Item.of("create:wheat_flour", 3)],
+        id: "farmersdelight_pie_crust",
+      },
+      // Shimmer
+      {
+        output: [{ fluid: "kubejs:shimmer", amount: BUCKET / 9 }],
+        input: ["ae2:fluix_crystal", "minecraft:glowstone_dust", "tconstruct:amethyst_bronze_nugget"],
+        heat: "heated",
+        time: 180,
+        id: "kubejs_shimmer_from_fluix_crystal",
+      },
+      {
+        output: [{ fluid: "kubejs:shimmer", amount: BUCKET }],
+        input: [Item.of("createastral:shimmer_marimo", 4), "naturalist:glow_goop", "astraladditions:lune_shroom"],
+        heat: "heated",
+        time: 180,
+        id: "kubejs_shimmer_from_shimmer_marimo",
+      },
+      {
+        output: { fluid: "kubejs:shimmer", amount: 250 * mB },
+        input: [Item.of("minecraft:amethyst_shard", 5), Item.of("minecraft:glow_ink_sac", 2)],
+        id: "kubejs_shimmer_from_amethyst_shard",
+      },
+      {
+        output: { fluid: "kubejs:shimmer", amount: 500 * mB },
+        input: [Item.of("techreborn:amethyst_dust", 5), Item.of("minecraft:glow_ink_sac", 2)],
+        heat: "heated",
+        id: "kubejs_shimmer_from_amethyst_dust",
+      },
+      {
+        output: { fluid: "kubejs:shimmer", amount: 1000 * mB },
+        input: [
+          Item.of("techreborn:amethyst_dust", 2),
+          Item.of("minecraft:glow_ink_sac", 1),
+          "astraladditions:lune_shroom",
+        ],
+        id: "kubejs_shimmer_from_lune_shroom",
       },
       // Liquid XP Nuggies
       {
@@ -1125,62 +1182,6 @@
         time: 12,
         id: "kubejs_liquid_xp_nuggies_from_xp_crystal",
       },
-      {
-        output: { fluid: "tconstruct:liquid_soul", amount: 250 * mB },
-        input: ["xpcrystals:soul_compound"],
-        heat: "heated",
-        time: 30,
-        id: "tconstruct_liquid_soul",
-      },
-      {
-        output: { fluid: "tconstruct:liquid_soul", amount: 250 * mB },
-        input: ["xpcrystals:soul_compound", { fluid: "minecraft:water", amount: 125 * mB }],
-        heat: "heated",
-        time: 25,
-        id: "tconstruct_liquid_soul", // ???
-      },
-      {
-        output: { fluid: "xpcrystals:soul", amount: 250 * mB },
-        input: { fluid: "tconstruct:liquid_soul", amount: 250 * mB },
-        time: 25,
-        id: "xpcrystals_soul",
-      },
-      {
-        output: { fluid: "createaddition:bioethanol", amount: BUCKET },
-        input: ["minecraft:sugar", "create:cinder_flour", Item.of("createaddition:biomass", 2)],
-        id: "createaddition_bioethanol",
-      },
-      {
-        output: "estrogen:balls",
-        input: "minecraft:slime_ball",
-        heat: "heated",
-        id: "estrogen_balls",
-      },
-      {
-        output: ["create:dough"],
-        input: ["create:wheat_flour", { fluid: "minecraft:water", amount: 500 * mB }],
-        time: 10,
-        id: "create_dough",
-      },
-      {
-        output: ["farmersdelight:pie_crust"],
-        input: [{ fluid: "milk:still_milk", amount: 250 * mB }, Item.of("create:wheat_flour", 3)],
-        id: "farmersdelight_pie_crust",
-      },
-      {
-        output: [{ fluid: "astralfoods:cream", amount: BUCKET }],
-        input: [Item.of("minecraft:sugar", 3), { fluid: "milk:still_milk", amount: BUCKET }],
-        heat: "heated",
-        time: 100,
-        id: "astralfoods_cream",
-      },
-      {
-        output: ["astralfoods:chocolate_ice_cream"],
-        input: ["create:bar_of_chocolate", { fluid: "astralfoods:cream", amount: 250 * mB }],
-        heat: "heated",
-        time: 60,
-        id: "astralfoods_chocolate_ice_cream",
-      },
     ];
 
     /** @type {number} */
@@ -1195,8 +1196,6 @@
         unidentified_recipe_count++;
       }
 
-      console.log(id);
-
       event.recipes
         .createMixing(recipe.output, recipe.input)
         .heatRequirement(recipe.heat ?? "none")
@@ -1204,9 +1203,13 @@
         .id(id);
     });
 
+    if (unidentified_recipe_count > 0) {
+      console.warn(`IDs for ${unidentified_recipe_count} Create miscellaneous mixing recipes were left undefined.`);
+    }
+
     /**
      * @param {string} tail The string to append to the ID.
-     * @returns {string}
+     * @returns {string} The complete ID.
      */
     function generateID(tail) {
       return `kubejs:create/mixing/misc/${tail}`;
