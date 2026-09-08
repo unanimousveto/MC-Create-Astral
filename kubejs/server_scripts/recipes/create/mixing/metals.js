@@ -456,6 +456,58 @@
       heat: "heated",
       id: combiningID("compound_mixture_from_tin_ingot"),
     },
+    // Combining - Yttrium
+    {
+      output: "yttr:yttrium_ingot",
+      input: [
+        { fluid: "kubejs:molten_desh", amount: INGOT * 4 },
+        { fluid: "kubejs:molten_yttrium", amount: INGOT },
+      ],
+      heat: "superheated",
+      time: 1000,
+      id: combiningID("yttrium_from_molten_desh"),
+    },
+    {
+      output: "yttr:yttrium_ingot",
+      input: [
+        { fluid: "kubejs:molten_ostrum", amount: INGOT * 2 },
+        { fluid: "kubejs:molten_yttrium", amount: INGOT },
+      ],
+      heat: "superheated",
+      time: 1000,
+      id: combiningID("yttrium_from_molten_ostrum"),
+    },
+    {
+      output: "yttr:yttrium_ingot",
+      input: [
+        { fluid: "kubejs:molten_calorite", amount: INGOT },
+        { fluid: "kubejs:molten_yttrium", amount: INGOT },
+      ],
+      heat: "superheated",
+      time: 1000,
+      id: combiningID("yttrium_from_molten_calorite"),
+    },
+    {
+      output: "yttr:yttrium_ingot",
+      input: [Item.of("ad_astra:desh_ingot", 4), { fluid: "kubejs:molten_yttrium", amount: INGOT }],
+      heat: "superheated",
+      time: 1000,
+      id: combiningID("yttrium_from_desh_ingots"),
+    },
+    {
+      output: "yttr:yttrium_ingot",
+      input: [Item.of("ad_astra:ostrum_ingot", 2), { fluid: "kubejs:molten_yttrium", amount: INGOT }],
+      heat: "superheated",
+      time: 1000,
+      id: combiningID("yttrium_from_ostrum_ingots"),
+    },
+    {
+      output: "yttr:yttrium_ingot",
+      input: ["ad_astra:calorite_ingot", { fluid: "kubejs:molten_yttrium", amount: INGOT }],
+      heat: "superheated",
+      time: 1000,
+      id: combiningID("yttrium_from_calorite_ingots"),
+    },
     // Melting - Amethyst
     {
       output: { fluid: "tconstruct:molten_amethyst", amount: GEM },

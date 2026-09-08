@@ -955,51 +955,6 @@
 
       // --- Yttr Mod ---
       {
-        output: "yttr:yttrium_ingot",
-        input: [
-          { fluid: "kubejs:molten_desh", amount: INGOT * 4 },
-          { fluid: "kubejs:molten_yttrium", amount: INGOT },
-        ],
-        heat: "superheated",
-        time: 1000,
-      },
-      {
-        output: "yttr:yttrium_ingot",
-        input: [
-          { fluid: "kubejs:molten_ostrum", amount: INGOT * 2 },
-          { fluid: "kubejs:molten_yttrium", amount: INGOT },
-        ],
-        heat: "superheated",
-        time: 1000,
-      },
-      {
-        output: "yttr:yttrium_ingot",
-        input: [
-          { fluid: "kubejs:molten_calorite", amount: INGOT },
-          { fluid: "kubejs:molten_yttrium", amount: INGOT },
-        ],
-        heat: "superheated",
-        time: 1000,
-      },
-      {
-        output: "yttr:yttrium_ingot",
-        input: [Item.of("ad_astra:desh_ingot", 4), { fluid: "kubejs:molten_yttrium", amount: INGOT }],
-        heat: "superheated",
-        time: 1000,
-      },
-      {
-        output: "yttr:yttrium_ingot",
-        input: [Item.of("ad_astra:ostrum_ingot", 2), { fluid: "kubejs:molten_yttrium", amount: INGOT }],
-        heat: "superheated",
-        time: 1000,
-      },
-      {
-        output: "yttr:yttrium_ingot",
-        input: ["ad_astra:calorite_ingot", { fluid: "kubejs:molten_yttrium", amount: INGOT }],
-        heat: "superheated",
-        time: 1000,
-      },
-      {
         output: "yttr:ruined_cobblestone",
         input: ["minecraft:cobblestone", "yttr:rubble", { fluid: "tconstruct:magma", amount: 250 * mB }],
         heat: "superheated",
