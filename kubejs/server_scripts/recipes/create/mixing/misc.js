@@ -870,6 +870,20 @@
         id: "tconstruct_grout",
       },
       {
+        output: Item.of("tconstruct:nether_grout", 3),
+        input: [
+          "minecraft:magma_cream",
+          "minecraft:soul_sand",
+          "create:scoria",
+          "#c:dusts/obsidian",
+          "#c:dusts/obsidian",
+          "#c:dusts/obsidian",
+        ],
+        heat: "heated",
+        time: 700,
+        id: "tconstruct_nether_grout",
+      },
+      {
         output: "tconstruct:seared_bricks",
         input: [Item.of("tconstruct:seared_brick", 4), "#c:slimeballs"],
         time: 0,
